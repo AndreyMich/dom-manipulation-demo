@@ -31,6 +31,9 @@ function createNewListItemFromValue(todoValue) {
 
   const button = document.createElement('button');
   button.classList.add('destroy');
+  button.addEventListener('click',function(){
+    this.parentElement.parentElement.remove();
+  });
 
   div.appendChild(inputToggle);
   div.appendChild(label);
